@@ -3,7 +3,7 @@ const { uuid } = require("uuidv4");
 const shortid = require("shortid");
 const cors = require("cors");
 const { handlerNotFound } = require("./middlewares");
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 const app = express();
 
 const logger = (req, res, next) => {
